@@ -36,6 +36,9 @@ $(document).ready(function() {
               console.log('Error playing video:', error);
           });
       });
+      players.forEach(player => {
+          player.prop('muted', false);
+      });
   }
 
   // Start playback on button click
