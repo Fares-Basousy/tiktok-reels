@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  // Play the first video by default
+  $('video').first()[0].play();
   // Function to check if the video is in view
   function checkVideoInView() {
     $("video").each(function () {
