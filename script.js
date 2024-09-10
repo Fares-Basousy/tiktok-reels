@@ -28,9 +28,9 @@ $(document).ready(function() {
   });
 
   // Play the first video by default
-  $(window).on('load', function() {
-    if (players.length > 0) {
-      players[0].play();
-    }
-  });
+  // $(window).on('load', function() {
+  //   if (players.length > 0) {
+  //     players[0].play();
+  //   }
+  // });
 });
