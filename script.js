@@ -1,31 +1,36 @@
+$(document).ready(function() {
+  // Initialize Plyr.js for all videos
+  const players = $('video').map(function() {
+    return new Plyr(this);
+  }).get();
 
-$(document).ready(function () {
-  // Play the first video by default (it will be muted, so autoplay will work)
-  // $('video').first()[0].play();
-
-  // Function to check if the video is in view
-  function checkVideoInView() {
-    $('video').each(function () {
-      var video = $(this);
-      var videoTop = video.offset().top;
-      var videoBottom = videoTop + video.outerHeight();
-      var windowTop = $(window).scrollTop();
-      var windowBottom = windowTop + $(window).height();
-
-      // Check if the video is fully visible in the viewport
-      if (videoBottom >= windowTop && videoTop <= windowBottom) {
-        video[0].play(); // Play video if in view
+  // Function to handle video playback based on intersection
+  function handleVideoPlayback(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        $(entry.target).get(0).play();
       } else {
-        video[0].pause(); // Pause video if out of view
+        $(entry.target).get(0).pause();
       }
     });
   }
 
-  // Initial check
-  checkVideoInView();
+  // Create an IntersectionObserver to monitor the videos
+  const observer = new IntersectionObserver(handleVideoPlayback, {
+    root: null, // Use the viewport
+    rootMargin: '0px',
+    threshold: 0.5 // Play video when it is 50% visible
+  });
 
-  // Check video position on scroll
-  $('.reelsContainer').on('scroll', function () {
-    checkVideoInView();
+  // Observe each video element
+  $('video').each(function() {
+    observer.observe(this);
+  });
+
+  // Play the first video by default
+  $(window).on('load', function() {
+    if (players.length > 0) {
+      players[0].play();
+    }
   });
 });
