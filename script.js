@@ -1,9 +1,11 @@
+
 $(document).ready(function () {
-  // Play the first video by default
-  $('video').first()[0].play();
+  // Play the first video by default (it will be muted, so autoplay will work)
+  // $('video').first()[0].play();
+
   // Function to check if the video is in view
   function checkVideoInView() {
-    $("video").each(function () {
+    $('video').each(function () {
       var video = $(this);
       var videoTop = video.offset().top;
       var videoBottom = videoTop + video.outerHeight();
@@ -23,7 +25,7 @@ $(document).ready(function () {
   checkVideoInView();
 
   // Check video position on scroll
-  $(".reelsContainer").on("scroll", function () {
+  $('.reelsContainer').on('scroll', function () {
     checkVideoInView();
   });
 });
