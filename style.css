@@ -43,6 +43,6 @@ body {
     width: 100%;
   }
   .reel {
-    min-width: 100;
+    min-width: 100%;
   }
 }
