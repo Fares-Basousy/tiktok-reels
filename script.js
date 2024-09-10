@@ -49,7 +49,6 @@ $(document).ready(function() {
       startPlayback();
       $(this).hide(); // Hide the button after playback starts if desired
   });
-console.log('started');
 
   // Optional: Automatically start playback if required (ensure it is user-initiated)
   $(window).on('load', function() {
