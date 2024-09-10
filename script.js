@@ -1,9 +1,7 @@
 $(document).ready(function() {
   // Initialize Plyr.js for all videos
   const players = $('video').map(function() {
-      return new Plyr(this,{
-        autoplay: true,
-      });
+      return new Plyr(this);
   }).get();
 
   // Function to handle video playback based on intersection
@@ -38,10 +36,6 @@ $(document).ready(function() {
               console.log('Error playing video:', error);
           });
       });
-      
-      players.forEach(player => {
-          player.muted=false;
-      });
   }
 
   // Start playback on button click
@@ -56,3 +50,4 @@ $(document).ready(function() {
       $('#startButton').click();
   });
 });
+console.log('done');
