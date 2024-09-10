@@ -29,21 +29,6 @@ $(document).ready(function() {
       observer.observe(this);
   });
 
-  // Function to start video playback
-  function startPlayback() {
-      players.forEach(player => {
-          player.play().catch(error => {
-              console.log('Error playing video:', error);
-          });
-      });
-  }
-
-  // Start playback on button click
-  $('#startButton').on('click', function() {
-      startPlayback();
-      $(this).hide(); // Hide the button after playback starts if desired
-  });
-
   // Optional: Automatically start playback if required (ensure it is user-initiated)
   $(window).on('load', function() {
       // Example: Triggering button click programmatically to simulate user interaction

@@ -55,7 +55,3 @@ body {
     min-width: 30vw;
   }
 }
-
-#hiddenPlayButton {
-  display: none; /* Hide the button */
-}
