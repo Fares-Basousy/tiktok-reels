@@ -46,3 +46,16 @@ body {
     min-width: 100%;
   }
 }
+
+@media only screen and (max-width: 1226px)  and (min-width: 600px) {
+  .reelsContainer {
+    width: 50vw;
+  }
+  .reel {
+    min-width: 30vw;
+  }
+}
+
+#hiddenPlayButton {
+  display: none; /* Hide the button */
+}
