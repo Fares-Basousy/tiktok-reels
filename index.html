@@ -14,48 +14,58 @@
     <!-- Plyr.js CSS -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Additional CSS -->
+    <link rel="stylesheet" href="transition-scroll.css" />
   </head>
   <body>
-    <div class="container">
-      <div style="display: flex; justify-content: center">
-        <div class="reelsContainer">
-          <div class="reel">
-            <video id="video0" loop controls>
-              <source src="./reel0.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="reel">
-            <video id="video1" loop controls>
-              <source src="./reel1.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="reel">
-            <video id="video2" loop controls>
-              <source src="./reel2.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="reel">
-            <video id="video3" loop controls>
-              <source src="./reel3.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="reel">
-            <video id="video3" loop controls>
-              <source src="./reel4.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="reel">
-            <video id="video3" loop controls>
-              <source src="./reel5.mp4" type="video/mp4" />
-            </video>
+    <div class="main-wrapper pt-5">
+      <div class="container">
+        <div style="display: flex; justify-content: center">
+          <div class="reelsContainer">
+            <div class="reel">
+              <video id="video0" loop controls>
+                <source src="./reel0.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="reel">
+              <video id="video1" loop controls>
+                <source src="./reel1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="reel">
+              <video id="video2" loop controls>
+                <source src="./reel2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="reel">
+              <video id="video3" loop controls>
+                <source src="./reel3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="reel">
+              <video id="video3" loop controls>
+                <source src="./reel4.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="reel">
+              <video id="video3" loop controls>
+                <source src="./reel5.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>
+      <!-- <div class="mouse-scroll">
+        <img src="./scroll-mouse.gif" alt="">
+      </div> -->
     </div>
-   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Plyr.js JS -->
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="script.js" type="text/javascript"></script>
+    <!-- additional script -->
+    <!-- <script src="scroll.js" type="text/javascript"></script> -->
+    <script src="transition-scroll.js" type="text/javascript"></script>
   </body>
 </html>

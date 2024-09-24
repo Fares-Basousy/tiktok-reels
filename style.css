@@ -8,16 +8,21 @@ body {
   background: rgb(233, 233, 233);
 }
 
+.main-wrapper{
+  position: relative;  
+}
+
 .reelsContainer {
-  height: 100vh;
+  height: calc(100vh - 3rem);
   width: 28vw;
-  margin-top: 4em;
+  /* margin-top: 4em; */
   padding-bottom: 100px;
   display: flex;
   overflow: auto;
   gap: 2em;
   flex-direction: column;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; /* Smooth scroll behavior */
 }
 
 .reelsContainer::-webkit-scrollbar {
@@ -32,6 +37,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .plyr--video {
   margin-top: auto;
   margin-bottom: auto;
@@ -55,3 +61,17 @@ body {
     min-width: 30vw;
   }
 }
+
+/* .mouse-scroll{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  overflow: hidden;
+  border-radius: 250px 5px 6px;
+}
+
+.mouse-scroll img{
+  max-width: 100%;
+} */
