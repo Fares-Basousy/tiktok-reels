@@ -160,19 +160,7 @@ function App() {
   console.log(videos)
   return (
 <>   
-  <head>
-{/*    
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    /> */}
-  {/* Plyr.js CSS */}
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-  {/* Additional CSS */}
- { /* <link rel="stylesheet" href="transition-scroll.css" /> */}
-  </head>
+ 
   <body>
     <div className="main-wrapper pt-5">
       <div className="container">
