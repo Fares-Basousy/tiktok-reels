@@ -1,16 +1,14 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
   // Initialize Plyr.js for all videos
-  const players = $('video').map(function() {
-    return new Plyr(this);
-  }).get();
+  const players = Array.from(document.querySelectorAll('video')).map(video => new Plyr(video));
 
   // Function to handle video playback based on intersection
   function handleVideoPlayback(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        $(entry.target).get(0).play();
+        entry.target.play();
       } else {
-        $(entry.target).get(0).pause();
+        entry.target.pause();
       }
     });
   }
@@ -23,14 +21,14 @@ $(document).ready(function() {
   });
 
   // Observe each video element
-  $('video').each(function() {
-    observer.observe(this);
+  document.querySelectorAll('video').forEach(video => {
+    observer.observe(video);
   });
 
   // Play the first video by default
-  // $(window).on('load', function() {
-  //   if (players.length > 0) {
-  //     players[0].play();
-  //   }
-  // });
+  window.addEventListener('load', function() {
+    if (players.length > 0) {
+      players[0].play();
+    }
+  });
 });
